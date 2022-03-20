@@ -1,12 +1,182 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
 <body>
-    <p>Hello</p>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h3>*Javascript*</h3>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="ask">
+          1: What are the differences between a variable that is: null, undefined?
+        </div>
+        <div class="answer">
+          null: Kiểu dữ liệu (typeof) là object. Là giá trị gán, có thể gán cho một biến.
+          undefined: Kiểu dữ liệu (typeof) là undefined. Là biến được khai báo nhưng chưa được gán giá trị nào.
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="ask">
+          2. What is `use strict`? what are the advantages and disadvantages to using it?
+        </div>
+        <div class="answer">
+          Use strict dịch sang tiếng việt thì có nghĩa là sử dụng sự nghiêm ngặt.
+          Khi một đoạn lệnh được khai báo use strict thì tất cả các dòng code ở phía dưới dòng khai báo use strict sẽ được quản lý một cách nghiêm ngặt hơn về cú pháp.
+
+          Ex: không có strict mode
+          a = 10;
+          console.log(a);
+          // => 10
+
+          có sử dụng strict mode
+          'use strict';
+          a = 10;
+          console.log(a);
+          // => Uncaught ReferenceError: a is not defined
+
+          *Advantages:
+          - Ngăn chặn sử dụng, và throw errors khi người lập trình thực hiện những xử lý được coi là unsafe, những xử lý mà có thể là ngoài ý muốn.
+          - Vô hiệu hoá các tính năng có thể gây nhầm lẫn, hoặc không nên được sử dụng.
+          - Ngăn chặn sử dụng một số từ mà có thể sẽ được sử dụng làm keywork trong tương lai.
+
+          *Disadvantages:
+          Nếu như coi việc viết code bình thường là Normal Mode, thì Strict Mode sẽ có thêm nhiều quy định khác so với Normal Mode.
+          Việc đó khiến cho một thao tác vốn bình thường có thể chạy ngon lành trở nên lỗi, và throw ra errors.
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="ask">
+          3. What are the differences between `==` and `===`? Write an example for each case (if any)?
+        </div>
+        <div class="answer">
+          ==: chỉ so sánh giá trị
+          ===: vừa so sánh giá trị và kiểu dữ liệu
+
+          Ex:
+          1 == '1'; // => true vì có cùng giá trị là 1
+          1 === '1'; // => false vì khác kiểu dữ liệu
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="ask">
+          4. Give a list of `Falsy` values in Javascript.
+        </div>
+        <div class="answer">
+          undefined, null, NaN, 0, "" (empty string), and false
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="ask">
+          5. Give an example for each of the following methods in Javascript
+        </div>
+        <div class="answer">
+          + map
+          let array = [1, 2, 3];
+          let map1 = array.map(el => el * 2);
+          console.log(map1);
+          // => [2, 4, 6]
+
+          + filter
+          let array = [1, 2, 3];
+          let evenNumber = array.filter(el => el % 2 === 0);
+          console.log(evenNumber);
+          // => [2]
+
+          + reduce
+          let array = [1, 2, 3];
+          let initialValue = 0;
+          let sum = array.reduce(
+            (previousValue, currentValue) => previousValue + currentValue,
+            initialValue
+          );
+          console.log(sum);
+          // => 6
+
+          + find
+          let array = [1, 2, 3];
+          let numberGreaterThanTwo = array.find(number => number > 2);
+          console.log(numberGreaterThanTwo);
+          // => 3
+
+          + some
+          let array = [1, 2, 3];
+          let isHaveNumberGreaterThanTwo = array.some(number => number > 2);
+          console.log(isHaveNumberGreaterThanTwo);
+          // => true
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="ask">
+          6. Give an example for add a new element to an array[] (at the end)
+        </div>
+        <div class="answer">
+          let array = [1, 2, 3];
+          array.push(4);
+          console.log(array);
+          // => [1, 2, 3, 4]
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="ask">
+          7. Give an example for add a new element to an array[] (at the beginning)
+        </div>
+        <div class="answer">
+          let array = [1, 2, 3];
+          array.unshift(0);
+          console.log(array);
+          // => [0, 1, 2, 3]
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="ask">
+          8. Give an example for removing an element in array[]
+        </div>
+        <div class="answer">
+          + Remove elements from the end of an array
+          let array = [1, 2, 3];
+          array.pop();
+          console.log(array);
+          // => [1, 2]
+
+          + Remove elements from the start of an array
+          let array = [1, 2, 3];
+          array.shift();
+          console.log(array);
+          // => [2, 3]
+
+          + Remove elements from the specific index of an array
+          let array = [1, 2, 3];
+          array.splice(0, 1);
+          console.log(array);
+          // => [2, 3]
+
+        </div>
+      </div>
+      <hr>
+
+      <div class="exercise">
+        <h3>### Playground: Check console</h3>
+      </div>
+    </div>
+  </main>
+  <script src="../public/js/exercise.js"></script>
 </body>
 </html>
