@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="col-md-3 header-logo">
+      <a href="index.html"><img src="../public/image/kalles.svg"/></a>
+    </div>
+    <div class="col-md-6 header-menu-center">
+      <ul>
+        <li><a href="#">Demo</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Lookbook</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 header-menu-right">
+      <ul>
+        <li><a href="#"><img src="../public/image/icons/search.svg"/></a></li>
+        <li><a href="#"><img src="../public/image/icons/person.svg"/></a></li>
+        <li><a href="#"><img src="../public/image/icons/heart.svg"/></a></li>
+        <li><a href="#"><img src="../public/image/icons/basket3.svg"/></a><span id="cart"></span></li>
+      </ul>
+      <div display="none" id="carts"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="content-full">
+    <hr>
+    <div class="row">
+      <div>
+        <h1 class="my-cart">My cart</h1>
+      </div>
+    </div>
+    <div class="row content-order-summary">
+      <div class="cart-content">
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th colspan="2">Product</th>
+              <th colspan="2">Quantity</th>
+              <th colspan="2">Price</th>
+              <th colspan="2">Sum</th>
+            </tr>
+          </thead>
+          <tbody id="list-cart">
+          </tbody>
+        </table>
+      </div>
+      <div class="order-summary">
+        <table>
+          <tr>
+            <td>Order summary</td>
+          </tr>
+          <tr>
+            <td>total</td>
+            <td id="total"></td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td id="shipping"></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td id="total-money"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-bottom">
+    <div class="content">
+      <div class="col-md-6 footer-bottom-left">
+        <p>Copyright © 2021 <span><a href="#">Kalles</a></span> all rights reserved. Powered by The4</p>
+      </div>
+      <div class="col-md-6 footer-bottom-right">
+        <ul>
+          <li><a href="">Shop</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../public/js/cart.js"></script>
+</body>
+</html>

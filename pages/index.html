@@ -7,11 +7,11 @@
   <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
   <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
-<body>
+<body onLoad="reload()">
 <header>
   <div class="header-container">
     <div class="col-md-3 header-logo">
-      <a><img src="../public/image/kalles.svg"/></a>
+      <a href="index.html"><img src="../public/image/kalles.svg"/></a>
     </div>
     <div class="col-md-6 header-menu-center">
       <ul>
@@ -29,8 +29,9 @@
         <li><a href="#"><img src="../public/image/icons/search.svg"/></a></li>
         <li><a href="#"><img src="../public/image/icons/person.svg"/></a></li>
         <li><a href="#"><img src="../public/image/icons/heart.svg"/></a></li>
-        <li><a href="#"><img src="../public/image/icons/basket3.svg"/></a></li>
+        <li><a href="cart.html"><img src="../public/image/icons/basket3.svg"/></a><span id="cart"></span></li>
       </ul>
+      <div display="none" id="carts"></div>
     </div>
   </div>
 </header>
@@ -54,20 +55,6 @@
     </div>
   </div>
   <div class="content">
-    <div class="row block-first">
-      <div class="col-md-6 item">
-        <div class="title">
-          <p>Baner A</p>
-        </div>
-        <img src="../public/image/2.png">
-      </div>
-      <div class="col-md-6 item">
-        <div class="title">
-          <p>Banner B</p>
-        </div>
-        <img src="../public/image/2.png">
-      </div>
-    </div>
     <div class="row block-second">
       <div class="title-block-second">
         <h3>Our Product</h3>
@@ -83,87 +70,32 @@
         </ul>
       </div>
     </div>
-    <div class="row block-third">
-      <div class="col-md-3 product">
-        <div class="image-product">
-          <img src="../public/image/1.png">
-          <div class="overlay">
-            <div class="link">
-              <a href="" class="quick-view"/>Quick view</a>
-              <a href="" class="add-to-cart"/>Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="name-product"> product A</p>
-          <p class="price-product">15$</p>
-          <div class="option-color">
-            <span class="border-color-product"><span class="color-product"></span></span>
-            <span class="border-color-product"><span class="color-product"></span></span>
-            <span class="border-color-product"><span class="color-product"></span></span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 product">
-        <div class="image-product">
-          <img src="../public/image/1.png">
-          <div class="overlay">
-            <div class="link">
-              <a href="" class="quick-view"/>Quick view</a>
-              <a href="" class="add-to-cart"/>Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="name-product"> product A</p>
-          <p class="price-product">20$</p>
-        </div>
-        <div class="option-color">
-          <span class="border-color-product"><span class="color-product"></span></span>
-          <span class="border-color-product"><span class="color-product"></span></span>
-          <span class="border-color-product"><span class="color-product"></span></span>
-        </div>
-      </div>
-      <div class="col-md-3 product">
-        <div class="image-product">
-          <img src="../public/image/1.png">
-          <div class="overlay">
-            <div class="link">
-              <a href="" class="quick-view"/>Quick view</a>
-              <a href="" class="add-to-cart"/>Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="name-product"> product A</p>
-          <p class="price-product">15$</p>
-        </div>
-        <div class="option-color">
-          <span class="border-color-product"><span class="color-product"></span></span>
-          <span class="border-color-product"><span class="color-product"></span></span>
-          <span class="border-color-product"><span class="color-product"></span></span>
-        </div>
-      </div>
-      <div class="col-md-3 product">
-        <div class="image-product">
-          <img src="../public/image/1.png">
-          <div class="overlay">
-            <div class="link">
-              <a href="" class="quick-view"/>Quick view</a>
-              <a href="" class="add-to-cart"/>Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="name-product"> product A</p>
-          <p class="price-product">15$</p>
-        </div>
-        <div class="option-color">
-          <span class="border-color-product"><span class="color-product"></span></span>
-          <span class="border-color-product"><span class="color-product"></span></span>
-          <span class="border-color-product"><span class="color-product"></span></span>
-        </div>
-      </div>
+    <div class="row block-third" id="list-product">
+<!--      <div class="product" id="product">-->
+<!--        <div class="col-md-3">-->
+<!--          <div class="image-product">-->
+<!--            <img src="../public/image/1.png">-->
+<!--            <div class="overlay">-->
+<!--              <div class="link">-->
+<!--                <a href="" class="quick-view"/>Quick view</a>-->
+<!--                <a href="" class="add-to-cart"/>Add to cart</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <p class="name-product"> product A</p>-->
+<!--            <p class="price-product">15$</p>-->
+<!--            <div class="option-color">-->
+<!--              <span class="border-color-product"><span class="color-product"></span></span>-->
+<!--              <span class="border-color-product"><span class="color-product"></span></span>-->
+<!--              <span class="border-color-product"><span class="color-product"></span></span>-->
+<!--            </div>-->
+<!--            <div class="btn-add-to-cart">-->
+<!--              <button>Add to cart</button>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
     <hr/>
     <div class="row block-four">
@@ -202,5 +134,6 @@
     </div>
   </div>
 </footer>
+<script src="../public/js/index.js"></script>
 </body>
 </html>
