@@ -30,8 +30,9 @@ var deleteUser = function (id) {
 var displayUsers = function (users) {
     let html = '';
     users.map(function (user) {
+        user.avatar = user.avatar ? user.avatar : 'https://www.keycdn.com/img/support/image-processing.png';
         html += '<tr>' +
-            '<td><img src="' + user.avatar + '"></td>' +
+            '<td><img src="' + user.avatar + '" class="avatar"></td>' +
             '<td> Group A</td>' +
             '<td>' + user.first_name + ' ' + user.last_name + '</td>' +
             '<td>' + user.email + '</td>' +

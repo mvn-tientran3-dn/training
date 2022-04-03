@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MANAGER_USER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
   <link rel="stylesheet" type="text/css" href="../public/css/style.css">
@@ -31,6 +32,9 @@
         </ul>
       </div>
       <div class="col-md-9 content-dashboard">
+        <div class="row">
+          <h3>Manager user</h3>
+        </div>
         <div class="row save-search-user">
           <div class="add-user">
             <div>
@@ -43,7 +47,7 @@
             </div>
             <div>
               <p>Email</p>
-              <input name="email" id="email" type="text"/>
+              <input name="email" id="email" type="email"/>
             </div>
             <div>
               <input type="button" value="Save" class="btn btn-save" onClick="saveUser()"/>
@@ -90,5 +94,6 @@
 <footer>
 </footer>
 <script src="../public/js/index.js"></script>
+<script src="../public/js/common.js"></script>
 </body>
 </html>
