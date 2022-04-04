@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MANAGER_USER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
 <body>
-    <p>Hello</p>
+<header>
+  <div class="header-container">
+    <div class="row">
+      <div class="col-md-2 account-login">
+        <span><img src="" /></span>
+        <span>Name</span>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="content-full">
+    <div class="row admin-page">
+      <div class="col-md-3 side-menu-left">
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">User</a></li>
+        </ul>
+      </div>
+      <div class="col-md-9 content-dashboard">
+        <div class="row">
+          <h3>Manager user</h3>
+        </div>
+        <div class="row save-search-user">
+          <div class="add-user">
+            <div>
+              <p>First Name</p>
+              <input name="first_name" id="first_name" type="text" />
+            </div>
+            <div>
+              <p>Last name</p>
+              <input name="last_name" id="last_name" type="text"/>
+            </div>
+            <div>
+              <p>Email</p>
+              <input name="email" id="email" type="email"/>
+            </div>
+            <div>
+              <input type="button" value="Save" class="btn btn-save" onClick="saveUser()"/>
+            </div>
+          </div>
+          <div class="search-user">
+            <form>
+              <div class="">
+                <input type="text" name="search"/>
+                <input type="button" value="Search" class="btn btn-search"/>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <table>
+            <thead>
+            <tr>
+              <th>Avatar</th>
+              <th>Group</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody id="list-user">
+            <tr>
+              <td><img src="https://i.top4top.io/p_1994j8njk1.png"></td>
+              <td>Ninja</td>
+              <td>Ahmed Mohamed</td>
+              <td>120</td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-delete">Delete</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+</footer>
+<script src="../public/js/index.js"></script>
+<script src="../public/js/common.js"></script>
 </body>
 </html>
